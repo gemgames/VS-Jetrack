@@ -15,5 +15,3 @@ bf-pixel
 senpai
 senpai-angry
 spirit
-g9
-g9-insane
