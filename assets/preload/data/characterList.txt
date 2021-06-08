@@ -16,4 +16,4 @@ senpai
 senpai-angry
 spirit
 g9
-g9-angry
+g9-insane
