@@ -33,7 +33,7 @@ class StoryMenuState extends MusicBeatState
 		['Senpai', 'Roses', 'Thorns'],
 		['Cloud', 'Jet'],
 		['Proton', 'BadWeek4'],
-		['Rocket', 'Autra'],
+		['Rocket', 'Autrua'],
 		
 	];
 	var curDifficulty:Int = 1;
