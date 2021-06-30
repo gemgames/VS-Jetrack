@@ -173,18 +173,18 @@ class TitleState extends MusicBeatState
 
 		if(Main.watermarks) {
 			logoBl = new FlxSprite(-150, -100);
-			logoBl.frames = Paths.getSparrowAtlas('KadeEngineLogoBumpin');
+			logoBl.frames = Paths.getSparrowAtlas('logo', 'shared');
 			logoBl.antialiasing = true;
-			logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
+			logoBl.animation.addByPrefix('bump', 'logo bump', 24);
 			logoBl.animation.play('bump');
 			logoBl.updateHitbox();
 			// logoBl.screenCenter();
 			// logoBl.color = FlxColor.BLACK;
 		} else {
 			logoBl = new FlxSprite(-150, -100);
-			logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+			logoBl.frames = Paths.getSparrowAtlas('logo', 'shared');
 			logoBl.antialiasing = true;
-			logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
+			logoBl.animation.addByPrefix('bump', 'logo bump', 24);
 			logoBl.animation.play('bump');
 			logoBl.updateHitbox();
 			// logoBl.screenCenter();
