@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="menu.png"><SubTexture name="menu stuff0000" x="0" y="0" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0001" x="3004" y="0" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0002" x="6008" y="0" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0003" x="9012" y="0" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0004" x="0" y="3004" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0005" x="3004" y="3004" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0006" x="6008" y="3004" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0007" x="9012" y="3004" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0008" x="0" y="6008" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0009" x="3004" y="6008" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0010" x="6008" y="6008" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="menu stuff0011" x="9012" y="6008" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+</TextureAtlas>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="unfunni moment.png"><SubTexture name="unfunni moment what dis0000" x="0" y="0" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0001" x="3004" y="0" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0002" x="6008" y="0" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0003" x="9012" y="0" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0004" x="0" y="3004" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0005" x="3004" y="3004" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0006" x="6008" y="3004" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0007" x="9012" y="3004" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0008" x="0" y="6008" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0009" x="3004" y="6008" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0010" x="6008" y="6008" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0011" x="9012" y="6008" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0012" x="0" y="9012" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0013" x="3004" y="9012" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0014" x="6008" y="9012" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0015" x="9012" y="9012" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0016" x="0" y="12016" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+<SubTexture name="unfunni moment what dis0017" x="3004" y="12016" width="3004" height="3004" frameX="0" frameY="0" frameWidth="3004" frameHeight="3004" />
+</TextureAtlas>

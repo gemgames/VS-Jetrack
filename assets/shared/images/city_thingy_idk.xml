@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="city_thingy_idk.png"><SubTexture name="city_thingy_idk a0000" x="0" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="city_thingy_idk a0001" x="5004" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="city_thingy_idk a0002" x="10008" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="city_thingy_idk a0003" x="15012" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+</TextureAtlas>
