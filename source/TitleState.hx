@@ -78,7 +78,6 @@ class TitleState extends MusicBeatState
 		 
 		#end
 
-		curWacky = FlxG.random.getObject(getIntroTextShit());
 
 		trace('hello');
 
@@ -251,20 +250,6 @@ class TitleState extends MusicBeatState
 		// credGroup.add(credTextShit);
 	}
 
-	function getIntroTextShit():Array<Array<String>>
-	{
-		var fullText:String = Assets.getText(Paths.txt('introText'));
-
-		var firstArray:Array<String> = fullText.split('\n');
-		var swagGoodArray:Array<Array<String>> = [];
-
-		for (i in firstArray)
-		{
-			swagGoodArray.push(i.split('--'));
-		}
-
-		return swagGoodArray;
-	}
 
 	var transitioning:Bool = false;
 
