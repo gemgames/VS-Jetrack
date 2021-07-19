@@ -122,6 +122,25 @@ class Character extends FlxSprite
 				
 				playAnim('idle');
 
+			case 'jetrack':
+				tex = Paths.getSparrowAtlas('characters/jetrack');
+				frames = tex;
+				animation.addByPrefix('idle', 'Jetrack idle dance', 24);
+				animation.addByPrefix('singUP', 'Jetrack Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'Jetrack Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'Jetrack Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'Jetrack Sing Note LEFT', 24);
+				animation.addByPrefix('arrive', 'Jetrack arrive', 24);
+
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+				addOffset("arrive");
+
+				playAnim('idle');
+		
 		}
 
 		dance();

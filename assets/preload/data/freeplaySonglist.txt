@@ -1,4 +1,4 @@
 Tutorial:gf:1
-Bopeebo:dad:1
-Fresh:dad:1
-Dad Battle:dad:1
+Bopeebo:jetrack:1
+Fresh:jetrack:1
+Dad Battle:jetrack:1
