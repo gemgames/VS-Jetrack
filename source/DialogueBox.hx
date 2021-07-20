@@ -28,8 +28,18 @@ class DialogueBox extends FlxSpriteGroup
 
 	public var finishThing:Void->Void;
 
-	var portraitLeft:FlxSprite;
-	var portraitRight:FlxSprite;
+	var portraitChallenge:FlxSprite;
+	var portraitHappy:FlxSprite;
+	var portraitSweat:FlxSprite;
+	var portraitError:FlxSprite;
+	var portraitBeep:FlxSprite;
+	var portraitWindyBoi:FlxSprite;
+	var portraitBF:FlxSprite;
+	var portraitFunny:FlxSprite;
+	var portraitBfFunkinDies:FlxSprite;
+	var portraitTrauma:FlxSprite;
+	var portraitBfSweat:FlxSprite;
+	var portraitblank:FlxSprite;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
@@ -74,28 +84,6 @@ class DialogueBox extends FlxSpriteGroup
 				box.height = 200;
 				box.x = 100;
 				box.y = 365;
-			case 'senpai':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-pixel');
-				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
-				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
-			case 'roses':
-				hasDialog = true;
-				FlxG.sound.play(Paths.sound('ANGRY_TEXT_BOX'));
-
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-senpaiMad');
-				box.animation.addByPrefix('normalOpen', 'SENPAI ANGRY IMPACT SPEECH', 24, false);
-				box.animation.addByIndices('normal', 'SENPAI ANGRY IMPACT SPEECH', [4], "", 24);
-
-			case 'thorns':
-				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-evil');
-				box.animation.addByPrefix('normalOpen', 'Spirit Textbox spawn', 24, false);
-				box.animation.addByIndices('normal', 'Spirit Textbox spawn', [11], "", 24);
-
-				var face:FlxSprite = new FlxSprite(320, 170).loadGraphic(Paths.image('weeb/spiritFaceForward'));
-				face.setGraphicSize(Std.int(face.width * 6));
-				add(face);
 		}
 
 		this.dialogueList = dialogueList;
@@ -103,134 +91,93 @@ class DialogueBox extends FlxSpriteGroup
 		if (!hasDialog)
 			return;
 		
-		portraitLeft = new FlxSprite(-20, 40);
-		portraitLeft.frames = Paths.getSparrowAtlas('weeb/senpaiPortrait');
-		portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);
-		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-		portraitLeft.updateHitbox();
-		portraitLeft.scrollFactor.set();
-		add(portraitLeft);
-		portraitLeft.visible = false;
+		portraitChallenge = new FlxSprite(10, 40);
+		portraitChallenge.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitChallenge.animation.addByPrefix('enter', 'portraits challenge', 24, false);
+		portraitChallenge.setGraphicSize(Std.int(box.width / 0.1));
+		portraitChallenge.updateHitbox();
+		portraitChallenge.scrollFactor.set();
+		add(portraitChallenge);
 
-		portraitRight = new FlxSprite(0, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortrait');
-		portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitRight.visible = false;
-		// i think its time to add some portraits
-		// nvm title first lol
-		// ok now im gonna add them
+		portraitHappy = new FlxSprite(10, 40);
+		portraitHappy.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitHappy.animation.addByPrefix('enter', 'portraits happy', 24, false);
+		portraitHappy.setGraphicSize(Std.int(box.width / 0.1));
+		portraitHappy.updateHitbox();
+		portraitHappy.scrollFactor.set();
+		add(portraitHappy);
 
-		portraitLeft = new FlxSprite(-20, 40);
-		portraitLeft.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitLeft.animation.addByPrefix('enter', 'portraits challenge', 24, false);
-		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-		portraitLeft.updateHitbox();
-		portraitLeft.scrollFactor.set();
-		add(portraitLeft);
-		portraitLeft.visible = false;
+		portraitSweat = new FlxSprite(10, 40);
+		portraitSweat.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitSweat.animation.addByPrefix('enter', 'portraits sweat', 24, false);
+		portraitSweat.setGraphicSize(Std.int(box.width / 0.1));
+		portraitSweat.updateHitbox();
+		portraitSweat.scrollFactor.set();
+		add(portraitSweat);
 
-		portraitLeft = new FlxSprite(-20, 40);
-		portraitLeft.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitLeft.animation.addByPrefix('enter', 'portraits happy', 24, false);
-		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-		portraitLeft.updateHitbox();
-		portraitLeft.scrollFactor.set();
-		add(portraitLeft);
-		portraitLeft.visible = false;
+		portraitError = new FlxSprite(10, 40);
+		portraitError.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitError.animation.addByPrefix('enter', 'portraits error', 24, false);
+		portraitError.setGraphicSize(Std.int(box.width / 0.1));
+		portraitError.updateHitbox();
+		portraitError.scrollFactor.set();
+		add(portraitError);
 
-		portraitLeft = new FlxSprite(-20, 40);
-		portraitLeft.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitLeft.animation.addByPrefix('enter', 'portraits sweat', 24, false);
-		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-		portraitLeft.updateHitbox();
-		portraitLeft.scrollFactor.set();
-		add(portraitLeft);
-		portraitLeft.visible = false;
+		portraitBeep = new FlxSprite(650, 205);
+		portraitBeep.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitBeep.animation.addByPrefix('enter', 'portraits bfBeep', 24, false);
+		portraitBeep.updateHitbox();
+		portraitBeep.scrollFactor.set();
+		add(portraitBeep);
 
-		portraitLeft = new FlxSprite(-20, 40);
-		portraitLeft.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitLeft.animation.addByPrefix('enter', 'portraits error', 24, false);
-		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-		portraitLeft.updateHitbox();
-		portraitLeft.scrollFactor.set();
-		add(portraitLeft);
-		portraitLeft.visible = false;
+		portraitWindyBoi = new FlxSprite(650, 175);
+		portraitWindyBoi.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitWindyBoi.animation.addByPrefix('enter', 'portraits blowinwindiguess', 24, false);
+		portraitWindyBoi.updateHitbox();
+		portraitWindyBoi.scrollFactor.set();
+		add(portraitWindyBoi);
 
-		portraitRight = new FlxSprite(-20, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitRight.animation.addByPrefix('enter', 'portraits bfBeep', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitLeft.visible = false;
+		portraitBF = new FlxSprite(650, 205);
+		portraitBF.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitBF.animation.addByPrefix('enter', 'portraits bf', 24, false);
+		portraitBF.updateHitbox();
+		portraitBF.scrollFactor.set();
+		add(portraitBF);
 
-		portraitRight = new FlxSprite(-20, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitRight.animation.addByPrefix('enter', 'portraits blowinwindiguess', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitLeft.visible = false;
+		portraitFunny = new FlxSprite(650, 205);
+		portraitFunny.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitFunny.animation.addByPrefix('enter', 'portraits idkwhatthisis', 24, false);
+		portraitFunny.updateHitbox();
+		portraitFunny.scrollFactor.set();
+		add(portraitFunny);
 
-		portraitRight = new FlxSprite(-20, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitRight.animation.addByPrefix('enter', 'portraits bf', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitLeft.visible = false;
+		portraitBfFunkinDies = new FlxSprite(650, 200);
+		portraitBfFunkinDies.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitBfFunkinDies.animation.addByPrefix('enter', 'portraits bfSkeleton', 24, false);
+		portraitBfFunkinDies.updateHitbox();
+		portraitBfFunkinDies.scrollFactor.set();
+		add(portraitBfFunkinDies);
 
-		portraitRight = new FlxSprite(-20, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitRight.animation.addByPrefix('enter', 'portraits idkwhatthisis', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitLeft.visible = false;
+		portraitTrauma = new FlxSprite(650, 180);
+		portraitTrauma.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitTrauma.animation.addByPrefix('enter', 'portraits traumaBf', 24, false);
+		portraitTrauma.updateHitbox();
+		portraitTrauma.scrollFactor.set();
+		add(portraitTrauma);
 
-		portraitRight = new FlxSprite(-20, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitRight.animation.addByPrefix('enter', 'portraits bfSkeleton', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitLeft.visible = false;
+		portraitBfSweat = new FlxSprite(650, 205);
+		portraitBfSweat.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitBfSweat.animation.addByPrefix('enter', 'portraits sweatBf', 24, false);
+		portraitBfSweat.updateHitbox();
+		portraitBfSweat.scrollFactor.set();
+		add(portraitBfSweat);
 
-		portraitRight = new FlxSprite(-20, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitRight.animation.addByPrefix('enter', 'portraits traumaBf', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitLeft.visible = false;
-
-		portraitRight = new FlxSprite(-20, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitRight.animation.addByPrefix('enter', 'portraits sweatBf', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		portraitRight.updateHitbox();
-		portraitRight.scrollFactor.set();
-		add(portraitRight);
-		portraitLeft.visible = false;
-
-		portraitLeft = new FlxSprite(-20, 40);
-		portraitLeft.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitLeft.animation.addByPrefix('enter', 'portraits blank', 24, false);
-		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-		portraitLeft.updateHitbox();
-		portraitLeft.scrollFactor.set();
-		add(portraitLeft);
-		portraitLeft.visible = false;
+		portraitblank = new FlxSprite(600, 215);
+		portraitblank.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
+		portraitblank.animation.addByPrefix('enter', 'portraits blank', 24, false);
+		portraitblank.updateHitbox();
+		portraitblank.scrollFactor.set();
+		add(portraitblank);
 		
 		box.animation.play('normalOpen');
 		box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
@@ -238,7 +185,6 @@ class DialogueBox extends FlxSpriteGroup
 		add(box);
 
 		box.screenCenter(X);
-		portraitLeft.screenCenter(X);
 
 		handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('weeb/pixelUI/hand_textbox'));
 		add(handSelect);
@@ -271,15 +217,6 @@ class DialogueBox extends FlxSpriteGroup
 	override function update(elapsed:Float)
 	{
 		// HARD CODING CUZ IM STUPDI
-		if (PlayState.SONG.song.toLowerCase() == 'roses')
-			portraitLeft.visible = false;
-		if (PlayState.SONG.song.toLowerCase() == 'thorns')
-		{
-			portraitLeft.color = FlxColor.BLACK;
-			swagDialogue.color = FlxColor.WHITE;
-			dropText.color = FlxColor.BLACK;
-		}
-
 		dropText.text = swagDialogue.text;
 
 		if (box.animation.curAnim != null)
@@ -316,8 +253,6 @@ class DialogueBox extends FlxSpriteGroup
 					{
 						box.alpha -= 1 / 5;
 						bgFade.alpha -= 1 / 5 * 0.7;
-						portraitLeft.visible = false;
-						portraitRight.visible = false;
 						swagDialogue.alpha -= 1 / 5;
 						dropText.alpha = swagDialogue.alpha;
 					}, 5);
@@ -354,104 +289,211 @@ class DialogueBox extends FlxSpriteGroup
 
 		switch (curCharacter)
 		{
-			case 'dad':
-				portraitRight.visible = false;
-				if (!portraitLeft.visible)
-				{
-					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
-				}
-			case 'bf':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
-				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
-				}
 			case 'jetrack-challenge':
-				portraitRight.visible = false;
-				if (!portraitLeft.visible)
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitChallenge.visible)
 				{
-					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
+					portraitChallenge.visible = true;
+					portraitChallenge.animation.play('enter');
 				}
 			case 'jet-happy':
-				portraitRight.visible = false;
-				if (!portraitLeft.visible)
+				portraitChallenge.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitHappy.visible)
 				{
-					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
+					portraitHappy.visible = true;
+					portraitHappy.animation.play('enter');
 				}
 			case 'jetsrack-sweat':
-				portraitRight.visible = false;
-				if (!portraitLeft.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitSweat.visible)
 				{
-					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
+					portraitSweat.visible = true;
+					portraitSweat.animation.play('enter');
 				}
 			case 'jet-BSOD':
-				portraitRight.visible = false;
-				if (!portraitLeft.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitError.visible)
 				{
-					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
+					portraitError.visible = true;
+					portraitError.animation.play('enter');
 				}
 			case 'beepFunkinBop':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitBeep.visible)
 				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitBeep.visible = true;
+					portraitBeep.animation.play('enter');
 				}
 			case 'bfDodgeIg':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitWindyBoi.visible)
 				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitWindyBoi.visible = true;
+					portraitWindyBoi.animation.play('enter');
 				}
 			case 'boyfriend':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitBF.visible)
 				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitBF.visible = true;
+					portraitBF.animation.play('enter');
 				}
 			case 'wotBf':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitFunny.visible)
 				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitFunny.visible = true;
+					portraitFunny.animation.play('enter');
 				}
 			case 'bfFunkinDies':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitBfFunkinDies.visible)
 				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitBfFunkinDies.visible = true;
+					portraitBfFunkinDies.animation.play('enter');
 				}
 			case 'bfButScared':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitBfSweat.visible = false;
+				portraitblank.visible = false;
+				if (!portraitTrauma.visible)
 				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitTrauma.visible = true;
+					portraitTrauma.animation.play('enter');
 				}
 			case 'bf-Sweat':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitblank.visible = false;
+				if (!portraitBfSweat.visible)
 				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitBfSweat.visible = true;
+					portraitBfSweat.animation.play('enter');
 				}
 			case 'literally-noone':
-				portraitRight.visible = false;
-				if (!portraitLeft.visible)
+				portraitChallenge.visible = false;
+				portraitHappy.visible = false;
+				portraitSweat.visible = false;
+				portraitError.visible = false;
+				portraitBeep.visible = false;
+				portraitWindyBoi.visible = false;
+				portraitBF.visible = false;
+				portraitFunny.visible = false;
+				portraitBfFunkinDies.visible = false;
+				portraitTrauma.visible = false;
+				portraitBfSweat.visible = false;
+				if (!portraitblank.visible)
 				{
-					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
+					portraitblank.visible = true;
+					portraitblank.animation.play('enter');
 				}
+				// If there was an easier way to do this then I hate myself (please fix my code other programmers)
 		}
 	}
 
