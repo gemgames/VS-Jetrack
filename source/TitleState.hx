@@ -173,6 +173,7 @@ class TitleState extends MusicBeatState
 		if(Main.watermarks) {
 			logoBl = new FlxSprite(-150, -100);
 			logoBl.frames = Paths.getSparrowAtlas('logo', 'shared');
+			logoBl.setGraphicSize(Std.int(logoBl.width / 3.5));
 			logoBl.antialiasing = true;
 			logoBl.animation.addByPrefix('bump', 'logo bump', 24);
 			logoBl.animation.play('bump');
@@ -182,6 +183,7 @@ class TitleState extends MusicBeatState
 		} else {
 			logoBl = new FlxSprite(-150, -100);
 			logoBl.frames = Paths.getSparrowAtlas('logo', 'shared');
+			logoBl.setGraphicSize(Std.int(logoBl.width / 3.5));
 			logoBl.antialiasing = true;
 			logoBl.animation.addByPrefix('bump', 'logo bump', 24);
 			logoBl.animation.play('bump');
@@ -308,17 +310,7 @@ class TitleState extends MusicBeatState
 				{
 					returnedData[0] = data.substring(0, data.indexOf(';'));
 					returnedData[1] = data.substring(data.indexOf('-'), data.length);
-				  	if (!MainMenuState.kadeEngineVer.contains(returnedData[0].trim()) && !OutdatedSubState.leftState && MainMenuState.nightly == "")
-					{
-						trace('outdated lmao! ' + returnedData[0] + ' != ' + MainMenuState.kadeEngineVer);
-						OutdatedSubState.needVer = returnedData[0];
-						OutdatedSubState.currChanges = returnedData[1];
-						FlxG.switchState(new OutdatedSubState());
-					}
-					else
-					{
-						FlxG.switchState(new MainMenuState());
-					}
+					FlxG.switchState(new MainMenuState());
 				}
 				
 				http.onError = function (error) {
