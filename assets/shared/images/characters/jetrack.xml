@@ -18,6 +18,15 @@
 	<SubTexture name="Jetrack idle dance0002" x="0" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack idle dance0003" x="572" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack idle dance0004" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0005" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0006" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0007" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0008" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0009" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0010" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0011" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0012" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack idle dance0013" x="1144" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack Sing Note LEFT0000" x="1716" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack Sing Note LEFT0001" x="2288" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack Sing Note LEFT0002" x="0" y="2288" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
