@@ -345,12 +345,13 @@ class PlayState extends MusicBeatState
 			case 'tutorial':
 				dialogue = ["Hey you're pretty cute.", 'Use the arrow keys to keep up \nwith me singing.'];
 			case 'bopeebo':
-				dialogue = [
-					'HEY!',
-					"You think you can just sing\nwith my daughter like that?",
-					"If you want to date her...",
-					"You're going to have to go \nthrough ME first!"
-				];
+				// dialogue = [
+					// 'HEY!',
+					// "You think you can just sing\nwith my daughter like that?",
+					// "If you want to date her...",
+					// "You're going to have to go \nthrough ME first!"
+					// ];
+				dialogue = CoolUtil.coolTextFile(Paths.txt('test/test'));
 			case 'fresh':
 				dialogue = ["Not too shabby boy.", ""];
 			case 'dadbattle':
@@ -1083,6 +1084,8 @@ class PlayState extends MusicBeatState
 							});
 						});
 					});
+				case 'bopeebo':
+					schoolIntro(doof);
 				case 'senpai':
 					schoolIntro(doof);
 				case 'roses':
