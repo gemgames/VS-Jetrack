@@ -1,4 +1,6 @@
 Tutorial:gf:1
-Bopeebo:jetrack:1
-Fresh:jetrack:1
-Dad Battle:jetrack:1
+Cloud:dad:1
+Jet:dad:1
+Rocket:dad:1
+Proton:dad:1
+Autrua:dad:1
