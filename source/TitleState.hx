@@ -128,7 +128,7 @@ class TitleState extends MusicBeatState
 	}
 
 	var logoBl:FlxSprite;
-	var gfDance:FlxSprite;
+	var jetVibe:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 
@@ -171,19 +171,9 @@ class TitleState extends MusicBeatState
 		add(bg);
 
 		if(Main.watermarks) {
-			logoBl = new FlxSprite(-150, -100);
+			logoBl = new FlxSprite(160, 250);
 			logoBl.frames = Paths.getSparrowAtlas('logo', 'shared');
-			logoBl.setGraphicSize(Std.int(logoBl.width / 3.5));
-			logoBl.antialiasing = true;
-			logoBl.animation.addByPrefix('bump', 'logo bump', 24);
-			logoBl.animation.play('bump');
-			logoBl.updateHitbox();
-			// logoBl.screenCenter();
-			// logoBl.color = FlxColor.BLACK;
-		} else {
-			logoBl = new FlxSprite(-150, -100);
-			logoBl.frames = Paths.getSparrowAtlas('logo', 'shared');
-			logoBl.setGraphicSize(Std.int(logoBl.width / 3.5));
+			logoBl.setGraphicSize(Std.int(logoBl.width / 6));
 			logoBl.antialiasing = true;
 			logoBl.animation.addByPrefix('bump', 'logo bump', 24);
 			logoBl.animation.play('bump');
@@ -192,15 +182,17 @@ class TitleState extends MusicBeatState
 			// logoBl.color = FlxColor.BLACK;
 		}
 
-		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		gfDance.antialiasing = true;
-		add(gfDance);
+		jetVibe = new FlxSprite(135, -95);
+		jetVibe.frames = Paths.getSparrowAtlas('menu', 'preload');
+		jetVibe.setGraphicSize(Std.int(jetVibe.width / 3));
+		jetVibe.antialiasing = true;
+		jetVibe.animation.addByPrefix('vibe', 'menu stuff', 24);
+		jetVibe.animation.play('vibe');
+		jetVibe.updateHitbox();
+		add(jetVibe);
 		add(logoBl);
 
-		titleText = new FlxSprite(100, FlxG.height * 0.8);
+		titleText = new FlxSprite(100, FlxG.height * 0.89);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
@@ -367,11 +359,6 @@ class TitleState extends MusicBeatState
 
 		logoBl.animation.play('bump');
 		danceLeft = !danceLeft;
-
-		if (danceLeft)
-			gfDance.animation.play('danceRight');
-		else
-			gfDance.animation.play('danceLeft');
 
 		FlxG.log.add(curBeat);
 
