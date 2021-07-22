@@ -28,8 +28,18 @@ class DialogueBox extends FlxSpriteGroup
 
 	public var finishThing:Void->Void;
 
-	var portraitLeft:FlxSprite;
-	var portraitRight:FlxSprite;
+	var portraitChallenge:FlxSprite;
+	var portraitHappy:FlxSprite;
+	var portraitSweat:FlxSprite;
+	var portraitError:FlxSprite;
+	var portraitBeep:FlxSprite;
+	var portraitWindyBoi:FlxSprite;
+	var portraitBF:FlxSprite;
+	var portraitFunny:FlxSprite;
+	var portraitBfFunkinDies:FlxSprite;
+	var portraitTrauma:FlxSprite;
+	var portraitBfSweat:FlxSprite;
+	var portraitblank:FlxSprite;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
