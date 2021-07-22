@@ -1084,7 +1084,7 @@ class PlayState extends MusicBeatState
 							});
 						});
 					});
-				case 'bopeebo':
+				case 'cloud':
 					schoolIntro(doof);
 				case 'senpai':
 					schoolIntro(doof);
