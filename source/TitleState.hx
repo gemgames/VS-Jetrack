@@ -197,7 +197,7 @@ class TitleState extends MusicBeatState
 		wallRight.antialiasing = true;
 		wallRight.updateHitbox();
 
-		wallLeft = new FlxSprite(-200, -95).loadGraphic(Paths.image('wallLeft', 'shared'));
+		wallLeft = new FlxSprite(-250, -95).loadGraphic(Paths.image('wallLeft', 'shared'));
 		wallLeft.setGraphicSize(Std.int(wallLeft.width / 3.5));
 		wallLeft.antialiasing = true;
 		wallLeft.updateHitbox();
