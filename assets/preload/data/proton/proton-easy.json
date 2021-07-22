@@ -1,0 +1,19 @@
+{
+    "song":{
+      "song":"Proton",
+      "bpm":145.0,
+      "needsVoices":true,
+      "player1":"bf",
+      "player2":"jetrack",
+      "speed":1.5,
+      "notes":[
+        {
+          "lengthInSteps":16,
+          "mustHitSection":true,
+          "sectionNotes":[
+            
+          ]
+        }
+      ]
+    }
+  }
