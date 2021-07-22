@@ -129,6 +129,8 @@ class TitleState extends MusicBeatState
 
 	var logoBl:FlxSprite;
 	var jetVibe:FlxSprite;
+	var wallLeft:FlxSprite;
+	var wallRight:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 
@@ -189,8 +191,21 @@ class TitleState extends MusicBeatState
 		jetVibe.animation.addByPrefix('vibe', 'menu stuff', 24);
 		jetVibe.animation.play('vibe');
 		jetVibe.updateHitbox();
+		
+		wallRight = new FlxSprite(125, -95).loadGraphic(Paths.image('wallRight'));
+		wallRight.setGraphicSize(Std.int(wallRight.width / 3.5));
+		wallRight.antialiasing = true;
+		wallRight.updateHitbox();
+
+		wallLeft = new FlxSprite(-200, -95).loadGraphic(Paths.image('wallLeft'));
+		wallLeft.setGraphicSize(Std.int(wallLeft.width / 3.5));
+		wallLeft.antialiasing = true;
+		wallLeft.updateHitbox();
+
 		add(jetVibe);
 		add(logoBl);
+		add(wallRight);
+		add(wallLeft);
 
 		titleText = new FlxSprite(100, FlxG.height * 0.89);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
