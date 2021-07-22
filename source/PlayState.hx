@@ -344,7 +344,7 @@ class PlayState extends MusicBeatState
 		{
 			case 'tutorial':
 				dialogue = ["Hey you're pretty cute.", 'Use the arrow keys to keep up \nwith me singing.'];
-			case 'bopeebo':
+			case 'cloud':
 				// dialogue = [
 					// 'HEY!',
 					// "You think you can just sing\nwith my daughter like that?",
