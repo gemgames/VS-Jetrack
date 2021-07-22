@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="rain_assets.png"><SubTexture name="rain animate0000" x="0" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain animate0001" x="5004" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+</TextureAtlas>
