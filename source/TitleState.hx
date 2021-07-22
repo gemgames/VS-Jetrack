@@ -185,19 +185,19 @@ class TitleState extends MusicBeatState
 		}
 
 		jetVibe = new FlxSprite(135, -95);
-		jetVibe.frames = Paths.getSparrowAtlas('menu', 'preload');
+		jetVibe.frames = Paths.getSparrowAtlas('menu', 'shared');
 		jetVibe.setGraphicSize(Std.int(jetVibe.width / 3));
 		jetVibe.antialiasing = true;
 		jetVibe.animation.addByPrefix('vibe', 'menu stuff', 24);
 		jetVibe.animation.play('vibe');
 		jetVibe.updateHitbox();
 		
-		wallRight = new FlxSprite(125, -95).loadGraphic(Paths.image('wallRight'));
+		wallRight = new FlxSprite(125, -95).loadGraphic(Paths.image('wallRightFixed', 'shared'));
 		wallRight.setGraphicSize(Std.int(wallRight.width / 3.5));
 		wallRight.antialiasing = true;
 		wallRight.updateHitbox();
 
-		wallLeft = new FlxSprite(-200, -95).loadGraphic(Paths.image('wallLeft'));
+		wallLeft = new FlxSprite(-200, -95).loadGraphic(Paths.image('wallLeft', 'shared'));
 		wallLeft.setGraphicSize(Std.int(wallLeft.width / 3.5));
 		wallLeft.antialiasing = true;
 		wallLeft.updateHitbox();
