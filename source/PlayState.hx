@@ -344,7 +344,7 @@ class PlayState extends MusicBeatState
 		{
 			case 'tutorial':
 				dialogue = ["Hey you're pretty cute.", 'Use the arrow keys to keep up \nwith me singing.'];
-			case 'cloud':
+			case 'bopeboo':
 				// dialogue = [
 					// 'HEY!',
 					// "You think you can just sing\nwith my daughter like that?",
@@ -366,6 +366,16 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
+			case 'cloud':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('cloud/cloudDialogue'));
+			case 'jet':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('jet/jetDialogue'));
+			case 'proton':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('proton/protonDialogue'));
+			case 'rocket':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('rocket/rocketDialogue'));
+			case 'autrua':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('autrua/autruaDialogue'));
 		}
 
 		//defaults if no stage was found in chart
@@ -1086,6 +1096,14 @@ class PlayState extends MusicBeatState
 					});
 				case 'cloud':
 					schoolIntro(doof);
+				case 'jet':
+					schoolIntro(doof);
+				case 'proton':
+					schoolIntro(doof);
+				case 'rocket':
+					schoolIntro(doof);
+				case 'autrua':
+					schoolIntro(doof);
 				case 'senpai':
 					schoolIntro(doof);
 				case 'roses':
@@ -1115,88 +1133,97 @@ class PlayState extends MusicBeatState
 	}
 
 	function schoolIntro(?dialogueBox:DialogueBox):Void
-	{
-		var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
-		black.scrollFactor.set();
-		add(black);
-
-		var red:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, 0xFFff1b31);
-		red.scrollFactor.set();
-
-		var senpaiEvil:FlxSprite = new FlxSprite();
-		senpaiEvil.frames = Paths.getSparrowAtlas('weeb/senpaiCrazy');
-		senpaiEvil.animation.addByPrefix('idle', 'Senpai Pre Explosion', 24, false);
-		senpaiEvil.setGraphicSize(Std.int(senpaiEvil.width * 6));
-		senpaiEvil.scrollFactor.set();
-		senpaiEvil.updateHitbox();
-		senpaiEvil.screenCenter();
-
-		if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'roses' || StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
 		{
-			remove(black);
-
-			if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
+			var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+			black.setGraphicSize(Std.int(black.width * 5));
+			black.scrollFactor.set();
+			add(black);
+	 
+			var jetArrive:FlxSprite = new FlxSprite();
+			jetArrive.frames = Paths.getSparrowAtlas('jetanim/arrive');
+			jetArrive.animation.addByPrefix('idle', 'Jetrack arrive', 24, false);
+			jetArrive.scrollFactor.set();
+			jetArrive.antialiasing = true;
+			jetArrive.updateHitbox();
+			jetArrive.screenCenter();
+			jetArrive.x -= -100;
+			jetArrive.y += -75;
+	 
+			if (SONG.song.toLowerCase() == 'cloud')
 			{
-				add(red);
+				dad.alpha = 0;
 			}
-		}
-
-		new FlxTimer().start(0.3, function(tmr:FlxTimer)
-		{
-			black.alpha -= 0.15;
-
-			if (black.alpha > 0)
+	 
+			new FlxTimer().start(0.3, function(tmr:FlxTimer)
 			{
-				tmr.reset(0.3);
-			}
-			else
-			{
-				if (dialogueBox != null)
+				black.alpha -= 0.15;
+	 
+				if (black.alpha > 0)
 				{
-					inCutscene = true;
-
-					if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
-					{
-						add(senpaiEvil);
-						senpaiEvil.alpha = 0;
-						new FlxTimer().start(0.3, function(swagTimer:FlxTimer)
-						{
-							senpaiEvil.alpha += 0.15;
-							if (senpaiEvil.alpha < 1)
-							{
-								swagTimer.reset();
-							}
-							else
-							{
-								senpaiEvil.animation.play('idle');
-								FlxG.sound.play(Paths.sound('Senpai_Dies'), 1, false, null, true, function()
-								{
-									remove(senpaiEvil);
-									remove(red);
-									FlxG.camera.fade(FlxColor.WHITE, 0.01, true, function()
-									{
-										add(dialogueBox);
-									}, true);
-								});
-								new FlxTimer().start(3.2, function(deadTime:FlxTimer)
-								{
-									FlxG.camera.fade(FlxColor.WHITE, 1.6, false);
-								});
-							}
-						});
-					}
-					else
-					{
-						add(dialogueBox);
-					}
+					tmr.reset(0.3);
 				}
 				else
-					startCountdown();
-
-				remove(black);
-			}
-		});
-	}
+				{
+					if (dialogueBox != null)
+					{
+						inCutscene = true;
+	 
+						if (SONG.song.toLowerCase() == 'cloud')
+						{
+							new FlxTimer().start(1, function(swagTimer:FlxTimer)
+							{
+								camFollow.setPosition(dad.getMidpoint().x + 400, dad.getMidpoint().y - 100);
+								new FlxTimer().start(2, function(swagTimer:FlxTimer)
+								{
+									add(jetArrive);
+									jetArrive.animation.play('idle', true, false, 24);
+									new FlxTimer().start(3, function(swagTimer:FlxTimer)
+									{
+										add(black);
+										new FlxTimer().start(0.05, function(timer:FlxTimer)
+										{
+											black.alpha += 0.05;
+	 
+											if (black.alpha < 1)
+											{
+												timer.reset(0.05);
+											}
+											else
+											{
+												remove(jetArrive);
+												dad.alpha = 1;
+												new FlxTimer().start(0.05, function(timer:FlxTimer)
+												{
+													black.alpha -= 0.05;
+	 
+													if (black.alpha > 0)
+													{
+														timer.reset(0.05);
+													}
+													else
+													{
+														remove(black);
+														add(dialogueBox);
+													}
+												});
+											}
+										});
+									});
+								});
+							});
+						}
+						else
+						{
+							add(dialogueBox);
+						}
+					}
+					else
+						startCountdown();
+	 
+					remove(black);
+				}
+			});
+		}
 
 	var startTimer:FlxTimer;
 	var perfectMode:Bool = false;

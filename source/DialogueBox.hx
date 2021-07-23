@@ -75,15 +75,55 @@ class DialogueBox extends FlxSpriteGroup
 		var hasDialog = false;
 		switch (PlayState.SONG.song.toLowerCase())
 		{
-			case 'bopeebo':
+			case 'cloud':
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('speech_bubble_talkingFEATNOTATHING', 'shared');
 				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
 				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
-				box.width = 200;
-				box.height = 200;
-				box.x = 100;
-				box.y = 365;
+				box.width = 225;
+				box.height = 225;
+				box.x = 125;
+				box.y = 350;
+
+			case 'jet':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talkingFEATNOTATHING', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+				box.width = 225;
+				box.height = 225;
+				box.x = 125;
+				box.y = 350;
+
+			case 'proton':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talkingFEATNOTATHING', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+				box.width = 225;
+				box.height = 225;
+				box.x = 125;
+				box.y = 350;
+
+			case 'rocket':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talkingFEATNOTATHING', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+				box.width = 225;
+				box.height = 225;
+				box.x = 125;
+				box.y = 350;
+
+			case 'autrua':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talkingFEATNOTATHING', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+				box.width = 225;
+				box.height = 225;
+				box.x = 125;
+				box.y = 350;
 		}
 
 		this.dialogueList = dialogueList;
@@ -91,90 +131,68 @@ class DialogueBox extends FlxSpriteGroup
 		if (!hasDialog)
 			return;
 		
-		portraitChallenge = new FlxSprite(10, 40);
-		portraitChallenge.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitChallenge.animation.addByPrefix('enter', 'portraits challenge', 24, false);
-		portraitChallenge.setGraphicSize(Std.int(box.width / 0.1));
+		portraitChallenge = new FlxSprite(75, 75).loadGraphic(Paths.image('portraits/challenge', 'shared'));
+		portraitChallenge.setGraphicSize(Std.int(portraitChallenge.width / 1.5));
 		portraitChallenge.updateHitbox();
 		portraitChallenge.scrollFactor.set();
 		add(portraitChallenge);
 
-		portraitHappy = new FlxSprite(10, 40);
-		portraitHappy.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitHappy.animation.addByPrefix('enter', 'portraits happy', 24, false);
-		portraitHappy.setGraphicSize(Std.int(box.width / 0.1));
+		portraitHappy = new FlxSprite(75, 75).loadGraphic(Paths.image('portraits/happy', 'shared'));
+		portraitHappy.setGraphicSize(Std.int(portraitHappy.width / 1.5));
 		portraitHappy.updateHitbox();
 		portraitHappy.scrollFactor.set();
 		add(portraitHappy);
 
-		portraitSweat = new FlxSprite(10, 40);
-		portraitSweat.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitSweat.animation.addByPrefix('enter', 'portraits sweat', 24, false);
-		portraitSweat.setGraphicSize(Std.int(box.width / 0.1));
+		portraitSweat = new FlxSprite(75, 75).loadGraphic(Paths.image('portraits/sweat', 'shared'));
+		portraitSweat.setGraphicSize(Std.int(portraitSweat.width / 1.5));
 		portraitSweat.updateHitbox();
 		portraitSweat.scrollFactor.set();
 		add(portraitSweat);
 
-		portraitError = new FlxSprite(10, 40);
-		portraitError.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitError.animation.addByPrefix('enter', 'portraits error', 24, false);
-		portraitError.setGraphicSize(Std.int(box.width / 0.1));
+		portraitError = new FlxSprite(75, 75).loadGraphic(Paths.image('portraits/error', 'shared'));
+		portraitError.setGraphicSize(Std.int(portraitError.width / 1.5));
 		portraitError.updateHitbox();
 		portraitError.scrollFactor.set();
 		add(portraitError);
 
-		portraitBeep = new FlxSprite(650, 205);
-		portraitBeep.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitBeep.animation.addByPrefix('enter', 'portraits bfBeep', 24, false);
+		portraitBeep = new FlxSprite(650, 175).loadGraphic(Paths.image('portraits/beep', 'shared'));
 		portraitBeep.updateHitbox();
 		portraitBeep.scrollFactor.set();
 		add(portraitBeep);
 
-		portraitWindyBoi = new FlxSprite(650, 175);
-		portraitWindyBoi.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitWindyBoi.animation.addByPrefix('enter', 'portraits blowinwindiguess', 24, false);
+		portraitWindyBoi = new FlxSprite(650, 175).loadGraphic(Paths.image('portraits/idk', 'shared'));
 		portraitWindyBoi.updateHitbox();
 		portraitWindyBoi.scrollFactor.set();
 		add(portraitWindyBoi);
 
-		portraitBF = new FlxSprite(650, 205);
-		portraitBF.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitBF.animation.addByPrefix('enter', 'portraits bf', 24, false);
+		portraitBF = new FlxSprite(650, 205).loadGraphic(Paths.image('portraits/bf', 'shared'));
 		portraitBF.updateHitbox();
 		portraitBF.scrollFactor.set();
 		add(portraitBF);
 
-		portraitFunny = new FlxSprite(650, 205);
-		portraitFunny.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitFunny.animation.addByPrefix('enter', 'portraits idkwhatthisis', 24, false);
+		portraitFunny = new FlxSprite(650, 205).loadGraphic(Paths.image('portraits/bfchallenge', 'shared'));
 		portraitFunny.updateHitbox();
 		portraitFunny.scrollFactor.set();
 		add(portraitFunny);
 
-		portraitBfFunkinDies = new FlxSprite(650, 200);
-		portraitBfFunkinDies.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitBfFunkinDies.animation.addByPrefix('enter', 'portraits bfSkeleton', 24, false);
+		portraitBfFunkinDies = new FlxSprite(650, 175); 
+		portraitBfFunkinDies.frames = Paths.getSparrowAtlas('portraits/bfdies', 'shared');
+		portraitBfFunkinDies.animation.addByPrefix('enter', 'BF dies', 24, false);
 		portraitBfFunkinDies.updateHitbox();
 		portraitBfFunkinDies.scrollFactor.set();
 		add(portraitBfFunkinDies);
 
-		portraitTrauma = new FlxSprite(650, 180);
-		portraitTrauma.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitTrauma.animation.addByPrefix('enter', 'portraits traumaBf', 24, false);
+		portraitTrauma = new FlxSprite(650, 180).loadGraphic(Paths.image('portraits/trauma', 'shared'));
 		portraitTrauma.updateHitbox();
 		portraitTrauma.scrollFactor.set();
 		add(portraitTrauma);
 
-		portraitBfSweat = new FlxSprite(650, 205);
-		portraitBfSweat.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitBfSweat.animation.addByPrefix('enter', 'portraits sweatBf', 24, false);
+		portraitBfSweat = new FlxSprite(650, 205).loadGraphic(Paths.image('portraits/bfsweat', 'shared'));
 		portraitBfSweat.updateHitbox();
 		portraitBfSweat.scrollFactor.set();
 		add(portraitBfSweat);
 
-		portraitblank = new FlxSprite(600, 215);
-		portraitblank.frames = Paths.getSparrowAtlas('portraits/portraitsthree', 'shared');
-		portraitblank.animation.addByPrefix('enter', 'portraits blank', 24, false);
+		portraitblank = new FlxSprite(650, 205).loadGraphic(Paths.image('portraits/blank', 'shared'));
 		portraitblank.updateHitbox();
 		portraitblank.scrollFactor.set();
 		add(portraitblank);
@@ -195,12 +213,12 @@ class DialogueBox extends FlxSpriteGroup
 			// box.flipX = true;
 		}
 
-		dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
+		dropText = new FlxText(242, 450, Std.int(FlxG.width * 0.6), "", 30);
 		dropText.font = 'Pixel Arial 11 Bold';
 		dropText.color = 0xFFD89494;
 		add(dropText);
 
-		swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
+		swagDialogue = new FlxTypeText(240, 448, Std.int(FlxG.width * 0.6), "", 30);
 		swagDialogue.font = 'Pixel Arial 11 Bold';
 		swagDialogue.color = 0xFF3F2021;
 		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
@@ -304,7 +322,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitChallenge.visible)
 				{
 					portraitChallenge.visible = true;
-					portraitChallenge.animation.play('enter');
 				}
 			case 'jet-happy':
 				portraitChallenge.visible = false;
@@ -321,7 +338,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitHappy.visible)
 				{
 					portraitHappy.visible = true;
-					portraitHappy.animation.play('enter');
 				}
 			case 'jetsrack-sweat':
 				portraitChallenge.visible = false;
@@ -338,7 +354,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitSweat.visible)
 				{
 					portraitSweat.visible = true;
-					portraitSweat.animation.play('enter');
 				}
 			case 'jet-BSOD':
 				portraitChallenge.visible = false;
@@ -355,7 +370,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitError.visible)
 				{
 					portraitError.visible = true;
-					portraitError.animation.play('enter');
 				}
 			case 'beepFunkinBop':
 				portraitChallenge.visible = false;
@@ -372,7 +386,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitBeep.visible)
 				{
 					portraitBeep.visible = true;
-					portraitBeep.animation.play('enter');
 				}
 			case 'bfDodgeIg':
 				portraitChallenge.visible = false;
@@ -389,7 +402,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitWindyBoi.visible)
 				{
 					portraitWindyBoi.visible = true;
-					portraitWindyBoi.animation.play('enter');
 				}
 			case 'boyfriend':
 				portraitChallenge.visible = false;
@@ -406,7 +418,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitBF.visible)
 				{
 					portraitBF.visible = true;
-					portraitBF.animation.play('enter');
 				}
 			case 'wotBf':
 				portraitChallenge.visible = false;
@@ -423,7 +434,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitFunny.visible)
 				{
 					portraitFunny.visible = true;
-					portraitFunny.animation.play('enter');
 				}
 			case 'bfFunkinDies':
 				portraitChallenge.visible = false;
@@ -441,6 +451,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					portraitBfFunkinDies.visible = true;
 					portraitBfFunkinDies.animation.play('enter');
+					FlxG.sound.play(Paths.sound('fnf_loss_sfx'));
 				}
 			case 'bfButScared':
 				portraitChallenge.visible = false;
@@ -457,7 +468,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitTrauma.visible)
 				{
 					portraitTrauma.visible = true;
-					portraitTrauma.animation.play('enter');
 				}
 			case 'bf-Sweat':
 				portraitChallenge.visible = false;
@@ -474,7 +484,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitBfSweat.visible)
 				{
 					portraitBfSweat.visible = true;
-					portraitBfSweat.animation.play('enter');
 				}
 			case 'literally-noone':
 				portraitChallenge.visible = false;
@@ -491,7 +500,6 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitblank.visible)
 				{
 					portraitblank.visible = true;
-					portraitblank.animation.play('enter');
 				}
 				// If there was an easier way to do this then I hate myself (please fix my code other programmers)
 		}

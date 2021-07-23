@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="arrive.png">
+  <SubTexture name="Jetrack arrive0000" x="0" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0001" x="572" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0002" x="1144" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0003" x="1716" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0004" x="2288" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0005" x="0" y="572" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0006" x="572" y="572" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0007" x="1144" y="572" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0008" x="1716" y="572" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	<SubTexture name="Jetrack arrive0009" x="2288" y="572" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+	</TextureAtlas>
+	
