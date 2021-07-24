@@ -720,10 +720,24 @@ class PlayState extends MusicBeatState
 								add(waveSpriteFG);
 						*/
 			}
+
 			case 'city':
 				{
 						defaultCamZoom = 1.2;
 						curStage = 'city';
+
+						var bg:FlxSprite = new FlxSprite(-2000, -2500).loadGraphic(Paths.image('city'));
+						bg.setGraphicSize(Std.int(bg.width / 2.2));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(0.9, 0.9);
+						bg.active = false;
+						add(bg);
+				}
+
+			case 'city-night':
+				{
+						defaultCamZoom = 1.2;
+						curStage = 'city-night';
 
 						var bg:FlxSprite = new FlxSprite(-2000, -2500);
 						bg.frames = Paths.getSparrowAtlas('city_thingy_idk');
@@ -849,11 +863,20 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
+			case 'city-night':
+				boyfriend.y -= 150;
+				boyfriend.x += 200;
+				gf.y -= 450;
+				gf.color = FlxColor.fromRGB(150, 150, 150, 0);
+				dad.x -= 275;
+				dad.y -= 150;
+
 			case 'city':
 				boyfriend.y -= 150;
 				boyfriend.x += 200;
 				gf.y -= 450;
-				dad.x -= 225;
+				gf.color = FlxColor.fromRGB(150, 150, 150, 0);
+				dad.x -= 275;
 				dad.y -= 150;
 		}
 
