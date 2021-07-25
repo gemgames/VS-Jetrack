@@ -140,7 +140,26 @@ class Character extends FlxSprite
 				addOffset("arrive");
 
 				playAnim('idle');
-		
+
+			case 'jetrack-annoyed':
+				tex = Paths.getSparrowAtlas('characters/jetrack_is_kinda_annoyed_not_gonna_lie');
+				frames = tex;
+				animation.addByPrefix('idle', 'jetrack is kinda annoyed not gonna lie idle', 24);
+				animation.addByPrefix('singUP', 'jetrack is kinda annoyed not gonna lie up', 24);
+				animation.addByPrefix('singRIGHT', 'jetrack is kinda annoyed not gonna lie right', 24);
+				animation.addByPrefix('singDOWN', 'jetrack is kinda annoyed not gonna lie down', 24);
+				animation.addByPrefix('singLEFT', 'jetrack is kinda annoyed not gonna lie left', 24);
+
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+
+				setGraphicSize(Std.int(width / 2.5));
+
+				playAnim('idle');
+	
 		}
 
 		dance();
