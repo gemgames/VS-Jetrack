@@ -1184,6 +1184,7 @@ class PlayState extends MusicBeatState
 						{
 						// we all know the goose from can da told brightfyre to do this -whitty
 						// I hate you whitty, I did some of it but yes brightfyre did help a lot -goose
+						// knew it -whitty
 							new FlxTimer().start(1, function(swagTimer:FlxTimer)
 							{
 								camFollow.setPosition(dad.getMidpoint().x + 100, dad.getMidpoint().y - 25);
