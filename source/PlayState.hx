@@ -1157,7 +1157,7 @@ class PlayState extends MusicBeatState
 			jetArrive.antialiasing = true;
 			jetArrive.updateHitbox();
 			jetArrive.screenCenter();
-			jetArrive.x -= 200;
+			jetArrive.x -= 125;
 			jetArrive.y += 25;
 	 
 			if (SONG.song.toLowerCase() == 'cloud')
@@ -1182,14 +1182,21 @@ class PlayState extends MusicBeatState
 						if (SONG.song.toLowerCase() == 'cloud')
 						{
 						// we all know the goose from can da told brightfyre to do this -whitty
+						// I hate you whitty -goose
 							new FlxTimer().start(1, function(swagTimer:FlxTimer)
 							{
 								camFollow.setPosition(dad.getMidpoint().x + 100, dad.getMidpoint().y - 25);
 								new FlxTimer().start(2, function(swagTimer:FlxTimer)
 								{
 									add(jetArrive);
+									FlxG.sound.play(Paths.sound('JetrackSFX/burst'));
 									jetArrive.animation.play('arrive');
-									new FlxTimer().start(3, function(swagTimer:FlxTimer)
+									new FlxTimer().start(0.1, function(swagTimer:FlxTimer)
+									{
+										FlxG.sound.play(Paths.sound('JetrackSFX/land_impact'));
+									});
+
+									new FlxTimer().start(1, function(swagTimer:FlxTimer)
 									{
 										add(black);
 										new FlxTimer().start(0.05, function(timer:FlxTimer)
