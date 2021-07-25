@@ -155,6 +155,7 @@ class PlayState extends MusicBeatState
 	private var songPositionBar:Float = 0;
 	
 	private var generatedMusic:Bool = false;
+	private var shakeCam:Bool = false;
 	private var startingSong:Bool = false;
 
 	public var iconP1:HealthIcon; //making these public again because i may be stupid
@@ -1182,7 +1183,7 @@ class PlayState extends MusicBeatState
 						if (SONG.song.toLowerCase() == 'cloud')
 						{
 						// we all know the goose from can da told brightfyre to do this -whitty
-						// I hate you whitty -goose
+						// I hate you whitty, I did some of it but yes brightfyre did help a lot -goose
 							new FlxTimer().start(1, function(swagTimer:FlxTimer)
 							{
 								camFollow.setPosition(dad.getMidpoint().x + 100, dad.getMidpoint().y - 25);
@@ -1194,6 +1195,12 @@ class PlayState extends MusicBeatState
 									new FlxTimer().start(0.1, function(swagTimer:FlxTimer)
 									{
 										FlxG.sound.play(Paths.sound('JetrackSFX/land_impact'));
+										shakeCam = true;	
+									});
+									
+									new FlxTimer().start(0.5, function(swagTimer:FlxTimer)
+									{
+										shakeCam = false;
 									});
 
 									new FlxTimer().start(1, function(swagTimer:FlxTimer)
@@ -1908,6 +1915,10 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		if (shakeCam)
+		{
+			FlxG.camera.shake(0.02, 0.02);
+		}
 		#if !debug
 		perfectMode = false;
 		#end
