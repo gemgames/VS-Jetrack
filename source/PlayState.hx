@@ -1201,6 +1201,7 @@ class PlayState extends MusicBeatState
 									
 									new FlxTimer().start(0.5, function(swagTimer:FlxTimer)
 									{
+										trace ("haha arrive animation go brr");
 										shakeCam = false;
 									});
 
