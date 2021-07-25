@@ -1151,7 +1151,7 @@ class PlayState extends MusicBeatState
 			add(black);
 	 
 			var jetArrive:FlxSprite = new FlxSprite();
-			jetArrive.frames = Paths.getSparrowAtlas('characters/jetrack');
+			jetArrive.frames = Paths.getSparrowAtlas('characters/jetrack', 'shared');
 			jetArrive.animation.addByPrefix('arrive', 'Jetrack arrive', 24, false);
 			jetArrive.scrollFactor.set();
 			jetArrive.antialiasing = true;
@@ -1187,7 +1187,7 @@ class PlayState extends MusicBeatState
 								new FlxTimer().start(2, function(swagTimer:FlxTimer)
 								{
 									add(jetArrive);
-									jetArrive.animation.play('arrive', true, false, 10);
+									jetArrive.animation.play('arrive');
 									new FlxTimer().start(3, function(swagTimer:FlxTimer)
 									{
 										add(black);
