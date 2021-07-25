@@ -1182,9 +1182,9 @@ class PlayState extends MusicBeatState
 	 
 						if (SONG.song.toLowerCase() == 'cloud')
 						{
-						// we all know the goose from can da told brightfyre to do this -whitty
+						// we all know the goose from can da told brightfyre to do this -the bobomb man man
 						// I hate you whitty, I did some of it but yes brightfyre did help a lot -goose
-						// knew it -whitty
+						// knew it -the bobomb man man
 							new FlxTimer().start(1, function(swagTimer:FlxTimer)
 							{
 								camFollow.setPosition(dad.getMidpoint().x + 100, dad.getMidpoint().y - 25);
