@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="jetrack.png">
-  <SubTexture name="Jetrack arrive0000" x="0" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+  	<SubTexture name="Jetrack arrive0000" x="0" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack arrive0001" x="572" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack arrive0002" x="1144" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack arrive0003" x="1716" y="0" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
@@ -13,7 +13,7 @@
 	<SubTexture name="Jetrack Sing Note DOWN0000" x="0" y="1144" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack Sing Note DOWN0001" x="572" y="1144" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack Sing Note DOWN0002" x="1144" y="1144" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
-  <SubTexture name="Jetrack idle dance0000" x="1716" y="1144" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
+  	<SubTexture name="Jetrack idle dance0000" x="1716" y="1144" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack idle dance0001" x="2288" y="1144" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack idle dance0002" x="0" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>
 	<SubTexture name="Jetrack idle dance0003" x="572" y="1716" width="572" height="572" frameX="0" frameY="0" frameWidth="572" frameHeight="572"/>

@@ -1151,14 +1151,14 @@ class PlayState extends MusicBeatState
 			add(black);
 	 
 			var jetArrive:FlxSprite = new FlxSprite();
-			jetArrive.frames = Paths.getSparrowAtlas('jetanim/arrive');
-			jetArrive.animation.addByPrefix('idle', 'Jetrack arrive', 24, false);
+			jetArrive.frames = Paths.getSparrowAtlas('characters/jetrack');
+			jetArrive.animation.addByPrefix('arrive', 'Jetrack arrive', 24, false);
 			jetArrive.scrollFactor.set();
 			jetArrive.antialiasing = true;
 			jetArrive.updateHitbox();
 			jetArrive.screenCenter();
-			jetArrive.x -= -100;
-			jetArrive.y += -75;
+			jetArrive.x -= 200;
+			jetArrive.y += 25;
 	 
 			if (SONG.song.toLowerCase() == 'cloud')
 			{
@@ -1183,11 +1183,11 @@ class PlayState extends MusicBeatState
 						{
 							new FlxTimer().start(1, function(swagTimer:FlxTimer)
 							{
-								camFollow.setPosition(dad.getMidpoint().x + 400, dad.getMidpoint().y - 100);
+								camFollow.setPosition(dad.getMidpoint().x + 100, dad.getMidpoint().y - 25);
 								new FlxTimer().start(2, function(swagTimer:FlxTimer)
 								{
 									add(jetArrive);
-									jetArrive.animation.play('idle', true, false, 24);
+									jetArrive.animation.play('arrive', true, false, 10);
 									new FlxTimer().start(3, function(swagTimer:FlxTimer)
 									{
 										add(black);
