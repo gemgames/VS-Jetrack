@@ -1,5 +1,6 @@
 package;
 
+import ThankState.ThankState;
 import openfl.ui.KeyLocation;
 import openfl.events.Event;
 import haxe.EnumTools;
@@ -855,6 +856,10 @@ class PlayState extends MusicBeatState
 
 			case 'jetrack':
 				dad.y += 200;
+
+			case 'jetrack-annoyed':
+				dad.y -= 1000;
+				dad.x -= 1250;
 		}
 
 
@@ -2774,16 +2779,16 @@ class PlayState extends MusicBeatState
 
 					paused = true;
 
-					FlxG.sound.music.stop();
-					vocals.stop();
-					if (FlxG.save.data.scoreScreen)
-						openSubState(new ResultsScreen());
-					else
+					/*if (SONG.song.toLowerCase() == "autrua")
 					{
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
-						FlxG.switchState(new MainMenuState());
+						FlxG.switchState(new ThankState());
 					}
-
+					else
+					*/
+					FlxG.sound.music.stop();
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					FlxG.switchState(new StoryMenuState());
+				
 					#if windows
 					if (luaModchart != null)
 					{
@@ -2854,7 +2859,8 @@ class PlayState extends MusicBeatState
 				if (FlxG.save.data.scoreScreen)
 					openSubState(new ResultsScreen());
 				else
-					FlxG.switchState(new FreeplayState());
+					FlxG.switchState(new FreeplayState());	
+				
 			}
 		}
 	}
