@@ -221,7 +221,7 @@ class DialogueBox extends FlxSpriteGroup
 		swagDialogue = new FlxTypeText(240, 448, Std.int(FlxG.width * 0.6), "", 30);
 		swagDialogue.font = 'Pixel Arial 11 Bold';
 		swagDialogue.color = 0xFF3F2021;
-		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('JetrackSFX/Dialogue/Jetrack Speaking'), 0.6)];
+		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('JetrackSFX/Dialogue/Jetrack Speaking', 'shared'), 0.6)];
 		add(swagDialogue);
 
 		dialogue = new Alphabet(0, 80, "", false, true);
@@ -270,6 +270,10 @@ class DialogueBox extends FlxSpriteGroup
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
 					{
 						box.alpha -= 1 / 5;
+						portraitChallenge.alpha -= 1 / 5;
+						portraitHappy.alpha -= 1 / 5;
+						portraitSweat.alpha -= 1 / 5;
+						portraitBfFunkinDies.alpha -= 1 / 5;
 						bgFade.alpha -= 1 / 5 * 0.7;
 						swagDialogue.alpha -= 1 / 5;
 						dropText.alpha = swagDialogue.alpha;
