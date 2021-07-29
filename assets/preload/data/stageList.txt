@@ -1,3 +1,4 @@
 stage
 city
+city-with-speakerbot
 city-night

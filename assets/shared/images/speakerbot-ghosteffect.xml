@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="speakerbot-ghosteffect.png"><SubTexture name="speakerbot do your thing0000" x="0" y="0" width="1004" height="1304" frameX="0" frameY="0" frameWidth="1004" frameHeight="1304" />
+<SubTexture name="speakerbot do your thing0001" x="1004" y="0" width="1004" height="1304" frameX="0" frameY="0" frameWidth="1004" frameHeight="1304" />
+<SubTexture name="speakerbot do your thing0002" x="2008" y="0" width="1004" height="1304" frameX="0" frameY="0" frameWidth="1004" frameHeight="1304" />
+<SubTexture name="speakerbot do your thing0003" x="3012" y="0" width="1004" height="1304" frameX="0" frameY="0" frameWidth="1004" frameHeight="1304" />
+<SubTexture name="speakerbot do your thing0004" x="0" y="1304" width="1004" height="1304" frameX="0" frameY="0" frameWidth="1004" frameHeight="1304" />
+<SubTexture name="speakerbot do your thing0005" x="1004" y="1304" width="1004" height="1304" frameX="0" frameY="0" frameWidth="1004" frameHeight="1304" />
+<SubTexture name="speakerbot do your thing0006" x="2008" y="1304" width="1004" height="1304" frameX="0" frameY="0" frameWidth="1004" frameHeight="1304" />
+</TextureAtlas>

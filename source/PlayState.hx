@@ -189,6 +189,7 @@ class PlayState extends MusicBeatState
 	var fc:Bool = true;
 
 	var bgGirls:BackgroundGirls;
+	var fgSpeakerbot:ForegroundSpeakerbot;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 
 	var talking:Bool = true;
@@ -728,7 +729,7 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 1.2;
 						curStage = 'city';
 
-						var bg:FlxSprite = new FlxSprite(-2000, -2500).loadGraphic(Paths.image('city'));
+						var bg:FlxSprite = new FlxSprite(-2000, -2500).loadGraphic(Paths.image('city', 'shared'));
 						bg.setGraphicSize(Std.int(bg.width / 2.2));
 						bg.antialiasing = true;
 						bg.scrollFactor.set(0.9, 0.9);
@@ -736,6 +737,35 @@ class PlayState extends MusicBeatState
 						add(bg);
 				}
 
+			case 'city-with-speakerbot':
+				{
+						defaultCamZoom = 1.2;
+						curStage = 'city-with-speakerbot';
+
+						var bg:FlxSprite = new FlxSprite(-2000, -2500).loadGraphic(Paths.image('city', 'shared'));
+						bg.setGraphicSize(Std.int(bg.width / 2.2));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(0.9, 0.9);
+						bg.active = false;
+						add(bg);
+
+						fgSpeakerbot = new ForegroundSpeakerbot(-100, 190);
+						fgSpeakerbot.scrollFactor.set(0.9, 0.9);
+
+					if (songLowercase == 'rocket')
+						{
+							if(FlxG.save.data.distractions){
+								fgSpeakerbot.noGhostEffect();
+						}
+
+					fgSpeakerbot.setGraphicSize(Std.int(bgGirls.width * daPixelZoom));
+					fgSpeakerbot.updateHitbox();
+					if(FlxG.save.data.distractions){
+						add(fgSpeakerbot);
+				}
+
+		}
+}
 			case 'city-night':
 				{
 						defaultCamZoom = 1.2;
