@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="my aunt made these.png"><SubTexture name="autrua arrows just friggin exist0000" x="0" y="0" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows just friggin exist0001" x="2004" y="0" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows just friggin exist0002" x="4008" y="0" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0000" x="6012" y="0" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0001" x="0" y="2004" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0002" x="2004" y="2004" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0003" x="4008" y="2004" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0004" x="6012" y="2004" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0005" x="0" y="4008" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0006" x="2004" y="4008" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0007" x="4008" y="4008" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0008" x="6012" y="4008" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0009" x="0" y="6012" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0010" x="2004" y="6012" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0011" x="4008" y="6012" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0012" x="6012" y="6012" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0013" x="0" y="8016" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0014" x="2004" y="8016" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0015" x="4008" y="8016" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0016" x="6012" y="8016" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+<SubTexture name="autrua arrows fuckin explode0017" x="0" y="10020" width="2004" height="2004" frameX="0" frameY="0" frameWidth="2004" frameHeight="2004" />
+</TextureAtlas>
