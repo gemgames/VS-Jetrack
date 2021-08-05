@@ -12,7 +12,7 @@ class ForegroundSpeakerbot extends FlxSprite
 		// the j
 		frames = Paths.getSparrowAtlas('speakerbot/speakerbot-2','shared');
 
-		animation.addByIndices('doYoThing', 'speakerbot ghosteffect', CoolUtil.numberArray(14), "", 24, false);
+		animation.addByPrefix('doYoThing', 'speakerbot do your thing', 24, false);
 
 		animation.play('doYoThing');
 	}
