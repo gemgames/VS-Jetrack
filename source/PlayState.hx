@@ -758,7 +758,7 @@ class PlayState extends MusicBeatState
 								fgSpeakerbot.noGhostEffect();
 						}
 
-					fgSpeakerbot.setGraphicSize(Std.int(bgGirls.width * daPixelZoom));
+					fgSpeakerbot.setGraphicSize(Std.int(fgSpeakerbot.width * daPixelZoom));
 					fgSpeakerbot.updateHitbox();
 					if(FlxG.save.data.distractions){
 						add(fgSpeakerbot);
