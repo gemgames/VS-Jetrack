@@ -749,7 +749,7 @@ class PlayState extends MusicBeatState
 						bg.active = false;
 						add(bg);
 
-						fgSpeakerbot = new ForegroundSpeakerbot(-100, 190);
+						fgSpeakerbot = new ForegroundSpeakerbot(100, -190);
 						fgSpeakerbot.scrollFactor.set(0.9, 0.9);
 
 					if (songLowercase == 'rocket')
