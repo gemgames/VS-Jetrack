@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="rain but better.png"><SubTexture name="rain but better a0000" x="0" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0001" x="5004" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0002" x="10008" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0003" x="15012" y="0" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0004" x="0" y="5004" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0005" x="5004" y="5004" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0006" x="10008" y="5004" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0007" x="15012" y="5004" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0008" x="0" y="10008" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0009" x="5004" y="10008" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0010" x="10008" y="10008" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0011" x="15012" y="10008" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0012" x="0" y="15012" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0013" x="5004" y="15012" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0014" x="10008" y="15012" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+<SubTexture name="rain but better a0015" x="15012" y="15012" width="5004" height="5004" frameX="0" frameY="0" frameWidth="5004" frameHeight="5004" />
+</TextureAtlas>
