@@ -2,10 +2,10 @@
 <TextureAtlas imagePath="campaign_menu_UI_assets.png">
 	<!-- Created with Adobe Anmate -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="0.png" x="0" y="0" width="3000" height="3000"/>
-	<SubTexture name="1.png" x="3000" y="0" width="3000" height="3000"/>
-	<SubTexture name="2.png" x="0" y="3000" width="3000" height="3000"/>
-	<SubTexture name="4.png" x="3000" y="3000" width="3000" height="3000"/>
+	<SubTexture name="jets rack0000" x="0" y="0" width="3000" height="3000"/>
+	<SubTexture name="jets rack0001" x="3000" y="0" width="3000" height="3000"/>
+	<SubTexture name="jets rack0002" x="0" y="3000" width="3000" height="3000"/>
+	<SubTexture name="jets rack0003" x="3000" y="3000" width="3000" height="3000"/>
 	<SubTexture name="BF HEY!!0000" x="6000" y="3000" width="395" height="416" frameX="0" frameY="0" frameWidth="415" frameHeight="418"/>
 	<SubTexture name="BF HEY!!0001" x="6000" y="3000" width="395" height="416" frameX="0" frameY="0" frameWidth="415" frameHeight="418"/>
 	<SubTexture name="BF HEY!!0002" x="6395" y="3000" width="413" height="410" frameX="-1" frameY="-8" frameWidth="415" frameHeight="418"/>
